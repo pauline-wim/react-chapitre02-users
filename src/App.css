@@ -25,7 +25,16 @@ span {
 
 /* COUNTER */
 
-h1 {
+.counter {
+  border: 2px solid black;
+  border-radius: 20px;
+  height: fit-content;
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+h1,
+.counter p {
   text-align: center;
 }
 

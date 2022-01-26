@@ -6,13 +6,13 @@ import Counter from "./components/Counter";
 import './App.css';
 
 class App extends React.Component {
-
+  
   constructor() {
 		super();
 
 		this.state = {
       Users,
-      count: 0,
+      count: 10,
     };
 
     this.substract = this.substract.bind(this);
@@ -35,23 +35,25 @@ class App extends React.Component {
     return (
       <main>
         <section className="counter">
-          <h1>Counter</h1>
-          <Counter 
+          <h1>User counter:</h1>
+          <Counter
             count={this.state.count} 
             substract={this.substract} 
             increment={this.increment}
           />
+          <p>Here are {this.state.count} users.</p>
         </section>
         <section className="user-info">
-          {this.state.Users.map((user) => {
-              return (
-                <UserInfo
-                  key={user.id}
-                  name={user.name}
-                  email={user.email}
-                  website={user.website}
-                />
-              )
+          {this.state.Users.map((user, index) => {
+            index = this.setState.count
+            return (
+              <UserInfo
+                key={user.id}
+                name={user.name}
+                email={user.email}
+                website={user.website}
+              />
+            )
           })}
         </section>
       </main> 
