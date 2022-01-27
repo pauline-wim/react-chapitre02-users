@@ -6,7 +6,7 @@ class UserInfo extends React.Component {
         return (
             <article>
                 <p><span>Name:</span> {this.props.name}</p>
-                <p><span>Email:</span> <a href="">{this.props.email}</a></p>
+                <p><span>Email:</span> <a href={`mailto:${this.props.email}`}>{this.props.email}</a></p>
                 <p><span>Website:</span> {this.props.website}</p>
             </article>
         )
