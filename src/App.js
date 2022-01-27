@@ -1,4 +1,5 @@
 import React from "react";
+// Components
 import Users from "./users.json";
 import UserInfo from "./components/UserInfo";
 import Counter from "./components/Counter";
@@ -8,9 +9,9 @@ import './App.css';
 class App extends React.Component {
   
   constructor() {
-		super();
-
-		this.state = {
+    super();
+    
+    this.state = {
       Users,
       count: 10,
     };
@@ -42,7 +43,6 @@ class App extends React.Component {
             count={this.state.count} 
             substract={this.substract} 
             increment={this.increment}
-            // users={}
           />
           <p>Here are {this.state.count} users.</p>
         </section>
