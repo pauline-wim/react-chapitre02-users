@@ -12,7 +12,6 @@ class App extends React.Component {
     super();
     
     this.state = {
-      Users,
       count: 10,
     };
 
@@ -34,9 +33,9 @@ class App extends React.Component {
   
   render() {
     const userNumber = this.state.count;
+
     return (
       <main>
-
         <section className="counter">
           <h1>User counter:</h1>
           <Counter
@@ -48,8 +47,8 @@ class App extends React.Component {
         </section>
 
         <section className="user-info">
-          {this.state.Users.map((user, index) => {
-            if (index < userNumber) {
+          {Users.map((user, i) => {
+            if (i < userNumber) {
               return (
                 <UserInfo
                 key={user.id}
@@ -59,10 +58,12 @@ class App extends React.Component {
                 />
               )
             }
+            return null;
           })}
         </section>
       </main> 
     )
+
   };
 
 };
