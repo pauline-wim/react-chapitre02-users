@@ -48,7 +48,6 @@ class App extends React.Component {
         </section>
 
         <section className="user-info">
-          
           {this.state.Users.map((user, index) => {
             if (index < userNumber) {
               return (
@@ -61,7 +60,6 @@ class App extends React.Component {
               )
             }
           })}
-        
         </section>
       </main> 
     )
